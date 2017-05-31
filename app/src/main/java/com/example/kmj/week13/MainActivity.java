@@ -98,10 +98,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
             tv2.setText("시작부터 " + values[0] + "초");
-            if (values[1] == 0) {
-                img.setImageResource(images[index]);
-                index = (index + 1) % 12;
-            }
+            img.setImageResource(images[index]);
+            index = (index + 1) % 12;
         }
 
         @Override
